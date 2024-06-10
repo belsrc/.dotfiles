@@ -1,0 +1,109 @@
+[user]
+	signingKey = 32EAF3B3
+	email = brykizer@gmail.com
+	name = Bryan Kizer
+[alias]
+    # Pretty logs
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+    # Log me
+    lgme = git log --author=Bryan --oneline --no-merges --all
+
+    # Shorthand diff command
+    d = diff
+
+    # Shorthand pull command
+    # git pl origin master
+    pl = pull
+
+    # Shorthand pull command
+    # git pl origin master
+    plo = !git pull origin $1 &&:
+
+    # Shorthand push command
+    # git ps origin master
+    ps = push
+
+    # Shorthand push command
+    # git ps origin master
+    pso = !git push origin $1 &&:
+
+    # Shorthand commit command
+    c = commit
+
+    # Commit with message
+    # git cm "Commit message"
+    cm = commit -m
+
+    # Add all files and interactive commit
+    ca = !git add -A && git commit
+
+    # Add all files and commit
+    # git cam "Commit message"
+    cam = !git add -A && git commit -m
+
+    # Switch to a branch
+    # git co new-branch
+    co = !git fetch && git checkout $1 &&:
+
+    # Switch to a branch and pull any changes
+    cop = !git fetch && git checkout $1 && git pull origin $1 &&:
+
+    # Create a new branch from Master
+    com = !git fetch && git checkout master && git pull origin master && git checkout -b $1 && git branch -v &&:
+
+    # Short format status messages
+    s = status -s
+
+    # List branches and last commit
+    b = branch -v
+
+    # Deletes a branch
+    bd = branch -d
+
+    # Show a list of tags
+    tl = tag -l
+
+    # Show a list of stashes
+    sl = stash list
+
+    # remove files from index (tracking)
+    unstage = reset HEAD
+
+    # Go back before last commit, with files in uncommitted state
+    uncommit = reset --soft HEAD^
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[color]
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal.
+    ui = auto
+[color "branch"]
+    current = red reverse
+    local = yellow
+    remote = cyan
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = cyan bold
+[color "status"]
+    added = green
+    changed = cyan
+    untracked = red bold
+[core]
+    # Make `git rebase` safer on macOS
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
+    # Speed up commands involving untracked files such as `git status`.
+    # https://git-scm.com/docs/git-update-index#_untracked_cache
+    untrackedCache = true
+    # Set git editor
+    editor = nano
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
