@@ -130,3 +130,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # One Dark bat theme
 export BAT_THEME="One Dark"
+
+# Pipe ripgrep into fzf
+rgfzf() { rg "$1" | fzf }
+alias rgf="rgfzf"
