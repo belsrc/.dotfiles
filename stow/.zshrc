@@ -190,5 +190,10 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 rgfzf() { rg "$1" | fzf }
 alias rgf="rgfzf"
 
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+
+alias cd="z"
+
 # thefuck alias
 eval $(thefuck --alias)
