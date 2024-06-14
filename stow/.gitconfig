@@ -80,19 +80,23 @@
     # Use colors in Git commands that are capable of colored output when
     # outputting to the terminal.
     ui = auto
+
 [color "branch"]
     current = red reverse
     local = yellow
     remote = cyan
+
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
     old = red bold
     new = cyan bold
+
 [color "status"]
     added = green
     changed = cyan
     untracked = red bold
+
 [core]
     # Make `git rebase` safer on macOS
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
@@ -101,9 +105,25 @@
     # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
     # Set git editor
-    editor = nano
+    editor = nvim
+    # Use delta as display
+    pager = delta
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
