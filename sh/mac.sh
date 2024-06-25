@@ -8,20 +8,13 @@ install_brew() {
   else
     info "Installing brew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew update
+    brew upgrade
     success "brew install complete."
   fi
 }
 
-install_fd() {
-  if exists "fd"; then
-    info "fd is already installed. Skipping."
-  else
-    info "Installing fd..."
-    brew install fd
-    success "fd install complete."
-  fi
-}
-
+# Could also use brew list | grep $a
 install_apps() {
   for a in "${apps[@]}"; do
     if exists "$a"; then
@@ -37,6 +30,7 @@ install_apps() {
 install_mac() {
   install_brew
   install_rust
-  install_fd
+  install_rust_pkgs
+  install_pip_pkgs
   install_apps
 }

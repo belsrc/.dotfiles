@@ -13,9 +13,10 @@ cargo_pkgs=(
   fd-find
   eza
   git-delta
+  zoxide
 )
 
-# pip_pkgs=(tldr)
+pip_pkgs=(tldr)
 
 reset_color=$(tput sgr 0)
 
@@ -52,10 +53,21 @@ install_rust() {
   rustup update
 }
 
-
 install_rust_pkgs() {
   for p in "${cargo_pkgs[@]}"; do
     if cargo install --list | grep $p &> /dev/null; then
+      info "$p is already installed. Skipping."
+    else
+      info "Installing $p..."
+      cargo install $p
+      success "$p install complete."
+    fi
+  done
+}
+
+install_pip_pkgs() {
+  for p in "${pip_pkgs[@]}"; do
+    if pip3 list | grep $p &> /dev/null; then
       info "$p is already installed. Skipping."
     else
       info "Installing $p..."

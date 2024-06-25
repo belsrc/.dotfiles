@@ -17,6 +17,7 @@ install_apps() {
 install_linux() {
   install_rust
   install_rust_pkgs
+  install_pip_pkgs
   install_apps
 
   sudo apt autoremove
