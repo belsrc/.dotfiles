@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 . sh/utils.sh
+. sh/installs.sh
 
 # Might as well get it now.
 sudo -v
@@ -8,6 +9,7 @@ sudo -v
 cd ~
 
 install_brew
+update_pkgs
 install_baseline
 install_rust
 install_omz
@@ -21,8 +23,11 @@ source_term
 install_nvm
 install_apps
 install_ripgrep
+install_fd
 install_rust_pkgs
-# install_pip_pkgs # if the stow puts pip on path, add to any_exists
+install_delta
+install_thefuck
+install_tldr
 install_neovim
 
 # install nvim repo
