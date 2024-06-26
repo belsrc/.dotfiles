@@ -1,20 +1,30 @@
 #!/usr/bin/env bash
 
-. sh/mac.sh
-. sh/nix.sh
+. sh/utils.sh
 
-OS="`uname`"
+# Might as well get it now.
+sudo -v
 
-if [ "$OS" = "Linux" ]; then
-  sudo -v
-  install_linux
-elif [ "$OS" = "Darwin" ]; then
-  install_mac
-else
-  echo "Unknown OS. Exiting."
-  exit 1
-fi
+cd ~
 
-# Setup oh-my-zsh? (should be done in stow)
-# Set zsh as default
-# Symlink stow
+install_brew
+install_baseline
+install_rust
+install_omz
+
+# chsh -s $(which zsh)
+# remove current stowed folders/files
+# mkdir for all folders needed (so no sym folder)
+# symlink stow
+source_term
+
+install_nvm
+install_apps
+install_ripgrep
+install_rust_pkgs
+# install_pip_pkgs # if the stow puts pip on path, add to any_exists
+install_neovim
+
+# install nvim repo
+
+clean_up
