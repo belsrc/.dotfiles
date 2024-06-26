@@ -2,6 +2,7 @@
 
 . sh/utils.sh
 . sh/installs.sh
+. sh/macos.sh
 
 # Might as well get it now.
 sudo -v
@@ -31,5 +32,7 @@ install_tldr
 install_neovim
 
 # install nvim repo
+
+mac_only
 
 clean_up
