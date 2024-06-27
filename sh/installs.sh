@@ -108,12 +108,6 @@ install_lua() {
   fi
 }
 
-# Run stow command.
-sym_stow() {
-  stow -d ~/.dotfiles/stow -t ~ .
-  source_term
-}
-
 # Install all of items in apps list.
 install_apps() {
   for a in "${apps[@]}"; do
@@ -234,13 +228,13 @@ install_tldr() {
 
 # Install nvm and set node to latest.
 install_nvm() {
-  if in_cmd "nvm"; then
-    info "nvm is already installed. Skipping."
+  if in_cmd "node"; then
+    info "node is already installed. Skipping."
   else
-    info "Installing nvm..."
+    info "Installing node..."
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
     source_term
     nvm use node
-    success "nvm install complete."
+    success "node install complete."
   fi
 }

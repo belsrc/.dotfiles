@@ -2,12 +2,11 @@
 
 . sh/utils.sh
 . sh/installs.sh
+. sh/files.sh
 . sh/macos.sh
 
 # Might as well get it now.
 sudo -v
-
-cd ~
 
 install_brew
 update_pkgs
@@ -18,16 +17,17 @@ export PATH="$PATH:/usr/bin"
 
 install_rust
 install_python
+install_nvm
 install_lua
 install_omz
 
-# chsh -s $(which zsh)
-# remove current stowed folders/files
-# mkdir for all folders needed (so no sym folder)
-# symlink stow
+chsh -s $(which zsh)
+rename_files
+rename_folders
+sym_stow
+
 source_term
 
-install_nvm
 install_apps
 install_ripgrep
 install_fd
@@ -36,7 +36,9 @@ install_delta
 install_tldr
 install_neovim
 
-# install nvim repo
+# Need to make it public first
+# git clone https://github.com/belsrc/chadstart.nvim.git ~/.config/nvim
+git clone git@github.com:belsrc/chadstart.nvim.git ~/.config/nvim
 
 mac_only
 

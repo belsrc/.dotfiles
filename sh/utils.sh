@@ -74,6 +74,14 @@ in_any() {
   in_cmd "$@" || in_manager "$@" || in_cargo "$@" || in_pip "$@"
 }
 
+file_exists() {
+  test -f "$@"
+}
+
+folder_exists() {
+  test -d "$@"
+}
+
 install_pkg() {
   OS="`uname`"
 
