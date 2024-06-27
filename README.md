@@ -1,7 +1,7 @@
 # .dotfiles
 
 Usual dotfile repo that everyone seems to have.
-I switch between Windows and Mac, so the script is aimed towards Mac and Window Subsystem.
+I switch between Windows and Mac, so the script is aimed towards Mac and Window Subsystem (Manjaro).
 
 ## Install
 

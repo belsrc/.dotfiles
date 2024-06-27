@@ -19,7 +19,6 @@ install_rust
 install_python
 install_nvm
 install_lua
-install_omz
 
 chsh -s $(which zsh)
 rename_files
@@ -28,6 +27,7 @@ sym_stow
 
 source_term
 
+install_omz
 install_apps
 install_ripgrep
 install_fd

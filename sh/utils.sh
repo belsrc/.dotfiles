@@ -2,6 +2,7 @@
 
 baseline=(
   git
+  lua
   zsh
   stow
 )
@@ -50,7 +51,7 @@ in_manager() {
 
   case $OS in
     'Linux')
-      dpkg -l | grep " $@ " &> /dev/null
+      pacman -Qe | grep " $@ " &> /dev/null
       ;;
     'Darwin')
       brew list | grep "$@" &> /dev/null
@@ -87,7 +88,7 @@ install_pkg() {
 
   case $OS in
     'Linux')
-      sudo apt-get install -y "$@" || echo "$p failed to install"
+      sudo pacman -S --noconfirm "$@" || echo "$p failed to install"
       ;;
     'Darwin')
       brew install "$@" || echo "$p failed to install"
@@ -102,8 +103,7 @@ update_pkgs() {
 
   case $OS in
     'Linux')
-      sudo apt-get update
-      sudo apt-get upgrade
+      sudo pacman -Syu
       ;;
     'Darwin')
       brew update
@@ -121,7 +121,7 @@ clean_up() {
 
   case $OS in
     'Linux')
-      sudo apt-get autoremove
+      sudo pacman -Qdtq | pacman -Rns - || echo "None"
       ;;
     'Darwin')
       brew cleanup

@@ -44,6 +44,9 @@ install_omz() {
   else
     info "Installing oh-my-zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     success "oh-my-zsh install complete."
   fi
 }
@@ -74,7 +77,7 @@ install_python() {
     OS="`uname`"
     case $OS in
       'Linux')
-        sudo apt-get install python3-dev python3-pip python3-setuptools || echo "python failed to install"
+        sudo pacman -S --noconfirm python python-pip || echo "python failed to install"
         ;;
       'Darwin')
         brew install python || echo "python failed to install"
@@ -83,28 +86,6 @@ install_python() {
     esac
 
     success "python install complete."
-  fi
-}
-
-# Install LUA. The package names are different.
-install_lua() {
-  if in_any "lua"; then
-    info "lua is already installed. Skipping."
-  else
-    info "Installing lua..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        sudo apt-get install lua5.4 || echo "lua failed to install"
-        ;;
-      'Darwin')
-        brew install lua || echo "lua failed to install"
-        ;;
-      *) ;;
-    esac
-
-    success "lua install complete."
   fi
 }
 
@@ -179,28 +160,6 @@ install_delta() {
     info "Installing git-delta..."
     cargo install git-delta
     success "git-delta install complete."
-  fi
-}
-
-# Install thefuck. There's different install locations.
-install_thefuck() {
-  if in_any "thefuck"; then
-    info "thefuck is already installed. Skipping."
-  else
-    info "Installing thefuck..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        pip3 install thefuck || echo "thefuck failed to install"
-        ;;
-      'Darwin')
-        brew install thefuck || echo "thefuck failed to install"
-        ;;
-      *) ;;
-    esac
-
-    success "thefuck install complete."
   fi
 }
 
