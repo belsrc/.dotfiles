@@ -18,6 +18,10 @@ bash setup.sh
 
 ![Terminal two](https://belsrc.github.io/gist-images/terminal/term-2.png)
 
+![Terminal three](https://belsrc.github.io/gist-images/terminal/term-3.png)
+
+![Terminal four](https://belsrc.github.io/gist-images/terminal/term-4.png)
+
 ![ls Output](https://belsrc.github.io/gist-images/terminal/ls.png)
 
 ![Git diff](https://belsrc.github.io/gist-images/terminal/git-diff.png)
