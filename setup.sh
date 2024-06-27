@@ -12,7 +12,13 @@ cd ~
 install_brew
 update_pkgs
 install_baseline
+
+export PATH="$PATH:/usr/bin"
+. ~/.bashrc
+
 install_rust
+install_python
+install_lua
 install_omz
 
 # chsh -s $(which zsh)
@@ -27,7 +33,6 @@ install_ripgrep
 install_fd
 install_rust_pkgs
 install_delta
-install_thefuck
 install_tldr
 install_neovim
 

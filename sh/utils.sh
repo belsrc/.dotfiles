@@ -4,13 +4,12 @@ baseline=(
   git
   zsh
   stow
-  python3
-  lua
 )
 
 apps=(
   fzf
   bat
+  thefuck
 )
 
 cargo_pkgs=(
@@ -51,7 +50,7 @@ in_manager() {
 
   case $OS in
     'Linux')
-      apt list --installed | grep "$@" &> /dev/null
+      dpkg -l | grep " $@ " &> /dev/null
       ;;
     'Darwin')
       brew list | grep "$@" &> /dev/null
@@ -80,7 +79,7 @@ install_pkg() {
 
   case $OS in
     'Linux')
-      sudo apt install -y "$@" || echo "$p failed to install"
+      sudo apt-get install -y "$@" || echo "$p failed to install"
       ;;
     'Darwin')
       brew install "$@" || echo "$p failed to install"
@@ -95,8 +94,8 @@ update_pkgs() {
 
   case $OS in
     'Linux')
-      sudo apt update
-      sudo apt upgrade
+      sudo apt-get update
+      sudo apt-get upgrade
       ;;
     'Darwin')
       brew update
@@ -114,7 +113,7 @@ clean_up() {
 
   case $OS in
     'Linux')
-      sudo apt autoremove
+      sudo apt-get autoremove
       ;;
     'Darwin')
       brew cleanup

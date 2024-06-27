@@ -64,6 +64,50 @@ install_rust() {
   rustup update
 }
 
+# Install Python. The package names are different.
+install_python() {
+  if in_any "pip"; then
+    info "python is already installed. Skipping."
+  else
+    info "Installing python..."
+
+    OS="`uname`"
+    case $OS in
+      'Linux')
+        sudo apt-get install python3-dev python3-pip python3-setuptools || echo "python failed to install"
+        ;;
+      'Darwin')
+        brew install python || echo "python failed to install"
+        ;;
+      *) ;;
+    esac
+
+    success "python install complete."
+  fi
+}
+
+# Install LUA. The package names are different.
+install_lua() {
+  if in_any "lua"; then
+    info "lua is already installed. Skipping."
+  else
+    info "Installing lua..."
+
+    OS="`uname`"
+    case $OS in
+      'Linux')
+        sudo apt-get install lua5.4 || echo "lua failed to install"
+        ;;
+      'Darwin')
+        brew install lua || echo "lua failed to install"
+        ;;
+      *) ;;
+    esac
+
+    success "lua install complete."
+  fi
+}
+
 # Run stow command.
 sym_stow() {
   stow -d ~/.dotfiles/stow -t ~ .
