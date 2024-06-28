@@ -7,10 +7,16 @@ baseline=(
   stow
 )
 
+# ripgrep and neovim have different package names and commands
+# so they only work since we grep the package manager list
+# if that changes then need to be seperate installs.
+
 apps=(
   fzf
   bat
+  ripgrep
   thefuck
+  neovim
 )
 
 cargo_pkgs=(

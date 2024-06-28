@@ -55,6 +55,8 @@ rename_folders() {
 
 # Run stow command.
 sym_stow() {
+  info "Symlinking dot files..."
   stow -d ~/.dotfiles/stow -t ~ .
   source_term
+  info "Symlinking complete."
 }

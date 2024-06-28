@@ -102,18 +102,6 @@ install_apps() {
   done
 }
 
-# Install ripgrep. The command and the package name are different
-# so just yank it out of the app list for ease.
-install_ripgrep() {
-  if in_cmd "rg"; then
-    info "ripgrep is already installed. Skipping."
-  else
-    info "Installing ripgrep..."
-    install_pkg ripgrep
-    success "ripgrep install complete."
-  fi
-}
-
 # Install all of items in cargo list.
 install_rust_pkgs() {
   for p in "${cargo_pkgs[@]}"; do
@@ -125,18 +113,6 @@ install_rust_pkgs() {
       success "$p install complete."
     fi
   done
-}
-
-# Install Neovim. The command and the package name are different
-# so just yank it out of the app list for ease.
-install_neovim() {
-  if in_cmd "nvim"; then
-    info "nvim is already installed. Skipping."
-  else
-    info "Installing nvim..."
-    install_pkg neovim
-    success "nvim install complete."
-  fi
 }
 
 # Install FD. The command and the package name are different
