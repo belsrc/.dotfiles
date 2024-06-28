@@ -5,6 +5,7 @@ baseline=(
   lua
   zsh
   stow
+  xclip
 )
 
 # ripgrep and neovim have different package names and commands
