@@ -169,6 +169,7 @@ install_nvm() {
     info "Installing node..."
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
     source_term
+    nvm install node
     nvm use node
     success "node install complete."
   fi
