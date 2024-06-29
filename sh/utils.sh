@@ -21,6 +21,7 @@ apps=(
 )
 
 cargo_pkgs=(
+  stylua
   eza
   git-delta
   zoxide
