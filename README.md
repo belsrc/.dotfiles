@@ -16,11 +16,11 @@ bash setup.sh
 
 ## Images
 
-Powerlevel10k
+**Powerlevel10k**
 
 ![Terminal one](https://belsrc.github.io/gist-images/terminal/term-1.png)
 
-`**Tab` and `**ctrl+t` (fzf + bat + eza)
+**`**Tab` and `**ctrl+t` (fzf + bat + eza)**
 
 ![Terminal two](https://belsrc.github.io/gist-images/terminal/term-2.png)
 
@@ -28,11 +28,11 @@ Powerlevel10k
 
 ![Terminal four](https://belsrc.github.io/gist-images/terminal/term-4.png)
 
-ls (eza)
+**ls (eza)**
 
 ![ls Output](https://belsrc.github.io/gist-images/terminal/ls.png)
 
-git diff (delta)
+**git diff (delta)**
 
 ![Git diff](https://belsrc.github.io/gist-images/terminal/git-diff.png)
 
