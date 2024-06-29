@@ -8,6 +8,7 @@ baseline=(
   zsh
   stow
   xclip
+  unzip
 )
 
 # ripgrep and neovim have different package names and commands
