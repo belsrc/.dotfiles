@@ -174,3 +174,13 @@ install_nvm() {
     success "node install complete."
   fi
 }
+
+install_pnpm() {
+  if in_any "pnpm"; then
+    info "pnpm is already installed. Skipping."
+  else
+    info "Installing pnpm..."
+    curl -fsSL https://get.pnpm.io/install.sh | sh -
+    success "pnpm install complete."
+  fi
+}

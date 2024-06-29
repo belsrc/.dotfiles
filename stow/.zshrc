@@ -119,6 +119,13 @@ export PATH="$PATH:/opt/homebrew/bin"
 alias pip='pip3'
 alias python='python3'
 
+# pnpm
+export PNPM_HOME="/home/bkizer/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -200,3 +207,4 @@ alias cd="z"
 
 # thefuck alias
 eval $(thefuck --alias)
+

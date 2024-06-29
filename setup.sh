@@ -26,6 +26,7 @@ sym_stow
 
 source_term
 
+install_pnpm
 install_omz
 install_fd
 install_rust_pkgs
