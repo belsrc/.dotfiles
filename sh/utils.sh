@@ -3,6 +3,8 @@
 baseline=(
   git
   lua
+  zig
+  cmake
   zsh
   stow
   xclip
