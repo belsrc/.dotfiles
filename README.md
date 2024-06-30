@@ -8,10 +8,8 @@ _Fair warning: There might be kinks_
 ## Install
 
 ```bash
-cd
-git clone https://github.com/belsrc/.dotfiles.git
-cd .dotfiles
-bash setup.sh
+git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
+. ~/.dotfiles/setup.sh
 ```
 
 ## Images
@@ -32,7 +30,7 @@ bash setup.sh
 
 ![ls Output](https://belsrc.github.io/gist-images/terminal/ls.png)
 
- #### git diff (delta)
+#### git diff (delta)
 
 ![Git diff](https://belsrc.github.io/gist-images/terminal/git-diff.png)
 

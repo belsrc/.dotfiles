@@ -38,9 +38,7 @@ info "Build cache for bat..."
 bat cache --build
 
 info "Cloning nvim setup..."
-# Need to make it public first
-# git clone https://github.com/belsrc/chadstart.nvim.git ~/.config/nvim
-git clone git@github.com:belsrc/chadstart.nvim.git ~/.config/nvim
+git clone https://github.com/belsrc/belstart.nvim.git ~/.config/nvim
 
 mac_only
 
