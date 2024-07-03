@@ -35,3 +35,37 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 ![Git diff](https://belsrc.github.io/gist-images/terminal/git-diff.png)
 
 ![Install script](https://belsrc.github.io/gist-images/terminal/nix-install.png)
+
+## Languages Installed
+
+lua
+zig
+
+## Applications Installed
+
+git
+cmake
+zsh
+stow
+xclip
+unzip
+fzf
+bat
+ripgrep
+thefuck
+neovim
+stylua
+eza
+git-delta
+zoxide
+
+## GUI Applications Installed
+
+kitty
+visual-studio-code
+arc
+slack
+qobuz
+spotify
+
+Additionally, this installed my [Neovim setup](https://github.com/belsrc/belstart.nvim).
