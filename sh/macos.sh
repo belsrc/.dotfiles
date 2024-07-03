@@ -272,7 +272,7 @@ install_vsc_extensions() {
   fi
 }
 
-# install obsidian
+# TODO: install obsidian
 
 mac_only() {
   OS="`uname`"
