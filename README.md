@@ -38,34 +38,34 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 
 ## Languages Installed
 
-lua
-zig
+- lua
+- zig
 
 ## Applications Installed
 
-git
-cmake
-zsh
-stow
-xclip
-unzip
-fzf
-bat
-ripgrep
-thefuck
-neovim
-stylua
-eza
-git-delta
-zoxide
+- git
+- cmake
+- zsh
+- stow
+- xclip
+- unzip
+- fzf
+- bat
+- ripgrep
+- thefuck
+- neovim
+- stylua
+- eza
+- git-delta
+- zoxide
 
 ## GUI Applications Installed
 
-kitty
-visual-studio-code
-arc
-slack
-qobuz
-spotify
+- kitty
+- visual-studio-code
+- arc
+- slack
+- qobuz
+- spotify
 
 Additionally, this installed my [Neovim setup](https://github.com/belsrc/belstart.nvim).
