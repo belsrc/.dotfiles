@@ -1,7 +1,10 @@
+[includeif "gitdir:~/Documents/"]
+  path = ~/.gitconfig-work
+
 [user]
-  #signingKey = 32EAF3B3
   email = brykizer@gmail.com
   name = Bryan Kizer
+
 [alias]
   # Pretty logs
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -72,12 +75,6 @@
 
   # Go back before last commit, with files in uncommitted state
   uncommit = reset --soft HEAD^
-
-[commit]
-  #gpgSign = true
-
-[tag]
-  #gpgSign = true
 
 [color]
   # Use colors in Git commands that are capable of colored output when
