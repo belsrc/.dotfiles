@@ -40,6 +40,8 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 
 - lua
 - zig
+- rust
+- python
 
 ## Applications Installed
 
