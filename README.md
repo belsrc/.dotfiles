@@ -70,4 +70,4 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - qobuz
 - spotify
 
-Additionally, this installed my [Neovim setup](https://github.com/belsrc/belstart.nvim).
+Additionally, this installs my [Neovim setup](https://github.com/belsrc/belstart.nvim).
