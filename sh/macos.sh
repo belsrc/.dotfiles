@@ -67,8 +67,6 @@ extensions=(
 )
 
 mac_config() {
-  info "Setting system preferences"
-
   ###############################################################################
   # General UI/UX                                                               #
   ###############################################################################
@@ -258,7 +256,6 @@ install_guis() {
     else
       info "Installing $c..."
       brew install --cask $c
-      success "$c install complete."
     fi
   done
 }
@@ -267,6 +264,7 @@ install_guis() {
 install_vsc_extensions() {
   if in_cmd "code"; then
     for e in "${extensions[@]}"; do
+      info "Installing the $c extension..."
       code --install-extension "$e"
     done
   fi
@@ -280,8 +278,15 @@ mac_only() {
   if [ "$OS" = "Darwin" ]; then
     info "Installing Nerd Font"
     brew install font-jetbrains-mono-nerd-font
+
+    info "Setting system preferences"
     mac_config
+    success "MacOS configuration set"
+
     install_guis
+    success "MacOS GUI apps installed"
+
     install_vsc_extensions
+    success "VSCode extensions installed"
   fi
 }

@@ -15,7 +15,7 @@ install_brew() {
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
       brew update
       brew upgrade
-      success "brew install complete."
+      success "Brew installed"
     else
       warn "Not MacOS. Skipping brew"
     fi
@@ -31,7 +31,6 @@ install_baseline() {
     else
       info "Installing $b..."
       install_pkg $b
-      success "$b install complete."
     fi
   done
 }
@@ -47,7 +46,6 @@ install_omz() {
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    success "oh-my-zsh install complete."
   fi
 }
 
@@ -60,7 +58,6 @@ install_rust() {
   else
     info "Installing rust..."
     curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-    success "rust install complete."
   fi
 
   info "Updating rust toolchain..."
@@ -84,8 +81,6 @@ install_python() {
         ;;
       *) ;;
     esac
-
-    success "python install complete."
   fi
 }
 
@@ -97,7 +92,6 @@ install_apps() {
     else
       info "Installing $a..."
       install_pkg $a
-      success "$a install complete."
     fi
   done
 }
@@ -110,7 +104,6 @@ install_rust_pkgs() {
     else
       info "Installing $p..."
       cargo install $p
-      success "$p install complete."
     fi
   done
 }
@@ -123,7 +116,6 @@ install_fd() {
   else
     info "Installing fd..."
     cargo install fd-find
-    success "fd install complete."
   fi
 }
 
@@ -135,7 +127,6 @@ install_delta() {
   else
     info "Installing git-delta..."
     cargo install git-delta
-    success "git-delta install complete."
   fi
 }
 
@@ -156,8 +147,6 @@ install_tldr() {
         ;;
       *) ;;
     esac
-
-    success "tldr install complete."
   fi
 }
 
@@ -171,7 +160,6 @@ install_nvm() {
     source_term
     nvm install node
     nvm use node
-    success "node install complete."
   fi
 }
 
@@ -181,6 +169,5 @@ install_pnpm() {
   else
     info "Installing pnpm..."
     curl -fsSL https://get.pnpm.io/install.sh | sh -
-    success "pnpm install complete."
   fi
 }
