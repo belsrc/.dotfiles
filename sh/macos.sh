@@ -9,6 +9,7 @@ casks=(
   slack
   qobuz
   spotify
+  obsidian
 )
 
 extensions=(
