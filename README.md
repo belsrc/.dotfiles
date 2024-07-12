@@ -44,6 +44,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 
 - lua
 - zig
+- go
 - rust
 - python
 
@@ -63,6 +64,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - stylua
 - eza
 - git-delta
+- lazygit
 - zoxide
 
 ## GUI Applications Installed
