@@ -34,11 +34,11 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 
 ![Git diff](https://belsrc.github.io/gist-images/terminal/git-diff.png)
 
-![Install script](https://belsrc.github.io/gist-images/terminal/nix-install.png)
-
 #### lazygit
 
-![lazygit](https://belsrc.github.io/gist-images/terminal/lazygit.png)
+![lazygit](https://belsrc.github.io/gist-images/terminal/lazygit2.png)
+
+![Install script](https://belsrc.github.io/gist-images/terminal/nix-install.png)
 
 ## Languages Installed
 
