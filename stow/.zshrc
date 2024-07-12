@@ -210,3 +210,5 @@ alias cd="z"
 # thefuck alias
 eval $(thefuck --alias)
 
+# ---- Lazygit (better git interface) ----
+alias lg="lazygit"

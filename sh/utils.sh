@@ -4,6 +4,7 @@ baseline=(
   git
   lua
   zig
+  go
   cmake
   zsh
   stow
@@ -20,6 +21,7 @@ apps=(
   bat
   ripgrep
   thefuck
+  lazygit
   neovim
 )
 
