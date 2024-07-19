@@ -22,6 +22,7 @@ export PATH="$PATH:/usr/bin"
 install_rust
 install_python
 install_nvm
+install_tsls
 success "Baseline applications/languages installed"
 
 chsh -s $(which zsh)

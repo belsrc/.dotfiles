@@ -163,6 +163,10 @@ install_nvm() {
   fi
 }
 
+install_tsls() {
+  npm i -g typescript-language-server
+}
+
 install_pnpm() {
   if in_any "pnpm"; then
     info "pnpm is already installed. Skipping."
