@@ -1,9 +1,10 @@
-[includeif "gitdir:~/Documents/"]
-  path = ~/.gitconfig-work
-
 [user]
   email = brykizer@gmail.com
   name = Bryan Kizer
+
+# Replace user if it is in a work related project
+[includeif "gitdir:~/Documents/"]
+  path = ~/.gitconfig-work
 
 [alias]
   # Pretty logs
