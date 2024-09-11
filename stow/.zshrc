@@ -212,3 +212,7 @@ eval $(thefuck --alias)
 
 # ---- Lazygit (better git interface) ----
 alias lg="lazygit"
+
+
+# ---- Yazi (better file manager) ----
+export EDITOR="nvim"

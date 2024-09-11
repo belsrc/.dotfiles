@@ -31,6 +31,8 @@ cargo_pkgs=(
   eza
   git-delta
   zoxide
+  yazi-fm
+  yazi-cli
 )
 
 reset_color=$(tput sgr 0)
