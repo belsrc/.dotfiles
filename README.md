@@ -53,23 +53,24 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - git
 - cmake
 - zsh
-- stow
+- [stow](https://www.gnu.org/software/stow/)
 - xclip
 - unzip
-- fzf
-- bat
-- ripgrep
-- thefuck
-- neovim
+- [fzf](https://github.com/junegunn/fzf)
+- [bat](https://github.com/sharkdp/bat)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [thefuck](https://github.com/nvbn/thefuck)
+- [neovim](https://neovim.io/)
 - stylua
-- eza
-- git-delta
-- lazygit
-- zoxide
+- [eza](https://github.com/eza-community/eza)
+- [git-delta](https://github.com/dandavison/delta)
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [yazi](https://yazi-rs.github.io/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ## GUI Applications Installed
 
-- kitty
+- [kitty](https://sw.kovidgoyal.net/kitty/)
 - visual-studio-code
 - arc
 - slack
