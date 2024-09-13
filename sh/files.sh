@@ -20,6 +20,9 @@ mk_folders=(
   ~/.config/bat
   ~/.config/bat/themes
   ~/.config/kitty
+  ~/.config/yazi
+  ~/.config/yazi/flavors
+  ~/.config/yazi/flavors/onedark.yazi
 )
 
 # Rename the old config files before we symlink the new ones.
