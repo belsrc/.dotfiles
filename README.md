@@ -53,24 +53,24 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - git
 - cmake
 - zsh
-- [stow](https://www.gnu.org/software/stow/)
+- [stow](https://www.gnu.org/software/stow/) (dotfile management)
 - xclip
 - unzip
-- [fzf](https://github.com/junegunn/fzf)
-- [bat](https://github.com/sharkdp/bat)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [thefuck](https://github.com/nvbn/thefuck)
-- [neovim](https://neovim.io/)
+- [fzf](https://github.com/junegunn/fzf) (CLI fuzzy finder)
+- [bat](https://github.com/sharkdp/bat) (better cat)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (better grep)
+- [thefuck](https://github.com/nvbn/thefuck) (WTF was that command?)
+- [neovim](https://neovim.io/) (the best editor)
 - stylua
-- [eza](https://github.com/eza-community/eza)
-- [git-delta](https://github.com/dandavison/delta)
-- [lazygit](https://github.com/jesseduffield/lazygit)
-- [yazi](https://yazi-rs.github.io/)
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [eza](https://github.com/eza-community/eza) (better ls)
+- [git-delta](https://github.com/dandavison/delta) (better git diff)
+- [lazygit](https://github.com/jesseduffield/lazygit) (better git)
+- [yazi](https://yazi-rs.github.io/) (terminal file manager)
+- [zoxide](https://github.com/ajeetdsouza/zoxide) (better cd)
 
 ## GUI Applications Installed
 
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [kitty terminal](https://sw.kovidgoyal.net/kitty/)
 - visual-studio-code
 - arc
 - slack
