@@ -26,6 +26,7 @@ apps=(
 )
 
 cargo_pkgs=(
+  just
   tree-sitter-cli
   stylua
   eza
