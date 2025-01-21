@@ -53,20 +53,24 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - git
 - cmake
 - zsh
-- [stow](https://www.gnu.org/software/stow/) (dotfile management)
 - xclip
 - unzip
+- [stow](https://www.gnu.org/software/stow/) (dotfile management)
+- [bat](https://github.com/sharkdp/bat) (better `cat`)
+- [bottom](https://github.com/ClementTsang/bottom) (better `top`)
+- [eza](https://github.com/eza-community/eza) (better `ls`)
 - [fzf](https://github.com/junegunn/fzf) (CLI fuzzy finder)
-- [bat](https://github.com/sharkdp/bat) (better cat)
-- [ripgrep](https://github.com/BurntSushi/ripgrep) (better grep)
-- [thefuck](https://github.com/nvbn/thefuck) (WTF was that command?)
+- [git-delta](https://github.com/dandavison/delta) (better `git diff`)
+- [lazygit](https://github.com/jesseduffield/lazygit) (better git interface)
+- [just](https://github.com/casey/just) (better `make`)
 - [neovim](https://neovim.io/) (the best editor)
-- stylua
-- [eza](https://github.com/eza-community/eza) (better ls)
-- [git-delta](https://github.com/dandavison/delta) (better git diff)
-- [lazygit](https://github.com/jesseduffield/lazygit) (better git)
+- [procs](https://github.com/dalance/procs) (better `ps`)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (better `grep`)
+- [sd](https://github.com/chmln/sd) (better `sed`)
+- [tealdeer](https://github.com/tealdeer-rs/tealdeer) (Rust version of [TLDR](https://github.com/tldr-pages/tldr))
+- [thefuck](https://github.com/nvbn/thefuck) (WTF was that command?)
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
-- [zoxide](https://github.com/ajeetdsouza/zoxide) (better cd)
+- [zoxide](https://github.com/ajeetdsouza/zoxide) (better `cd`)
 
 ## GUI Applications Installed
 
