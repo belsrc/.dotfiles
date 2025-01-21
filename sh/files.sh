@@ -19,6 +19,7 @@ mk_folders=(
   ~/.config/alacritty
   ~/.config/bat
   ~/.config/bat/themes
+  ~/.config/ghostty
   ~/.config/kitty
   ~/.config/yazi
   ~/.config/yazi/flavors
