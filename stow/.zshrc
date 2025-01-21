@@ -198,7 +198,7 @@ export BAT_THEME="One Dark"
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
-# Pipe ripgrep into fzf
+# ---- Pipe ripgrep into fzf ----
 rgfzf() { rg "$1" | fzf }
 alias rgf="rgfzf"
 
@@ -207,7 +207,16 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-# thefuck alias
+# ---- Bottom (better top) ----
+alias top="btm"
+
+# ---- SD (better sed) ----
+alias sed="sd"
+
+# ---- Procs (better ps) ----
+alias ps="procs"
+
+# ---- thefuck alias ----
 eval $(thefuck --alias)
 
 # ---- Lazygit (better git interface) ----
