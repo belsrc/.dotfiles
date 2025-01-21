@@ -36,6 +36,7 @@ cargo_pkgs=(
   eza
   git-delta
   zoxide
+  hyperfine
   yazi-fm
   yazi-cli
 )
