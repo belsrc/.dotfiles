@@ -130,26 +130,6 @@ install_delta() {
   fi
 }
 
-# Install tldr. There's different install locations and names.
-install_tldr() {
-  if in_any "tldr" || in_any "tlrc"; then
-    info "tldr is already installed. Skipping."
-  else
-    info "Installing tldr..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        pip3 install tldr || echo "thefuck failed to install"
-        ;;
-      'Darwin')
-        brew install tlrc || echo "thefuck failed to install"
-        ;;
-      *) ;;
-    esac
-  fi
-}
-
 # Install nvm and set node to latest.
 install_nvm() {
   if in_cmd "node"; then

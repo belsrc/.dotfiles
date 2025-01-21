@@ -37,7 +37,6 @@ install_omz
 install_fd
 install_rust_pkgs
 install_delta
-install_tldr
 install_apps
 success "Applications installed"
 

@@ -29,6 +29,10 @@ cargo_pkgs=(
   just
   tree-sitter-cli
   stylua
+  bottom
+  sd
+  procs
+  tealdeer
   eza
   git-delta
   zoxide
