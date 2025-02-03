@@ -195,6 +195,11 @@ _fzf_comprun() {
 # One Dark bat theme
 export BAT_THEME="One Dark"
 
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
+
+############## ALIASES
+
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
@@ -203,9 +208,11 @@ rgfzf() { rg "$1" | fzf }
 alias rgf="rgfzf"
 
 # ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
-
 alias cd="z"
+
+# ---- Bottom (better top) ----
+alias cat="bat"
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # ---- Bottom (better top) ----
 alias top="btm"
