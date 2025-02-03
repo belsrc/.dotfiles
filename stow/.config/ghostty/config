@@ -1,7 +1,8 @@
 font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 theme = OneHalfDark
-background-opacity = 0.95
+background-opacity = 0.99
+
 window-height = 62
 window-width = 233
 window-save-state = always
@@ -10,5 +11,12 @@ window-padding-y = 4
 window-padding-balance = true
 window-inherit-working-directory = true
 window-inherit-font-size = false
+confirm-close-surface = false
+
 link-url = true
 shell-integration = zsh
+
+keybind = super+enter=new_tab
+keybind = ctrl+n=next_tab
+keybind = ctrl+p=previous_tab
+keybind = ctrl+d=close_tab
