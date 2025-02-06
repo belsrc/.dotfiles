@@ -11,7 +11,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
   # Log me
-  lgme = git log --author=Bryan --oneline --no-merges --all
+  lgme = log --author=Bryan --oneline --no-merges --all
 
   # Shorthand diff command
   d = diff
