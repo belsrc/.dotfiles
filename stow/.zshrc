@@ -114,6 +114,9 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin"
 
+# Go Bin
+export PATH="$PATH:$HOME/go/bin"
+
 # Rust
 . "$HOME/.cargo/env"
 
