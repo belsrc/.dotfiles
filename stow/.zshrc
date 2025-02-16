@@ -237,3 +237,10 @@ export EDITOR="nvim"
 
 # ---- General ----
 count() { rg "$@" | wc -l }
+
+# bun completions
+[ -s "/home/bkizer/.bun/_bun" ] && source "/home/bkizer/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
