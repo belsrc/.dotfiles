@@ -155,3 +155,21 @@ install_pnpm() {
     curl -fsSL https://get.pnpm.io/install.sh | sh -
   fi
 }
+
+install_bun() {
+  if in_any "bun"; then
+    info "bun is already installed. Skipping."
+  else
+    info "Installing bun..."
+    curl -fsSL https://bun.sh/install | bash
+  fi
+}
+
+install_rustowl() {
+  if in_any "rustowl"; then
+    info "rustowl is already installed. Skipping."
+  else
+    info "Installing rustowl..."
+    curl -L "https://github.com/cordx56/rustowl/releases/download/v0.1.1/install.sh" | s
+  fi
+}

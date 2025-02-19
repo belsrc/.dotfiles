@@ -23,6 +23,7 @@ install_rust
 install_python
 install_nvm
 install_tsls
+install_bun
 success "Baseline applications/languages installed"
 
 chsh -s $(which zsh)
@@ -37,6 +38,7 @@ install_omz
 install_fd
 install_rust_pkgs
 install_delta
+install_rustowl
 install_apps
 success "Applications installed"
 
