@@ -131,6 +131,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# bun completions
+[ -s "/home/bkizer/.bun/_bun" ] && source "/home/bkizer/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -238,9 +245,9 @@ export EDITOR="nvim"
 # ---- General ----
 count() { rg "$@" | wc -l }
 
-# bun completions
-[ -s "/home/bkizer/.bun/_bun" ] && source "/home/bkizer/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# ---- Mac only ----
+if [[ $OSTYPE == darwin* ]]; then
+  alias flush="dscacheutil -flushcache"
+  # Mac doesn't have lscpu, close as you can get
+  alias lscpu="sysctl -a | grep machdep.cpu"
+fi
