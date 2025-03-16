@@ -233,11 +233,14 @@ alias sed="sd"
 # ---- Procs (better ps) ----
 alias ps="procs"
 
-# ---- thefuck alias ----
-eval $(thefuck --alias)
-
 # ---- Lazygit (better git interface) ----
 alias lg="lazygit"
+
+# ---- Tokei (Count lines of code) ----
+alias loc="tokei"
+
+# ---- thefuck alias ----
+eval $(thefuck --alias)
 
 # ---- Yazi (better file manager) ----
 export EDITOR="nvim"

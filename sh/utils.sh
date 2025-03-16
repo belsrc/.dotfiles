@@ -22,6 +22,7 @@ apps=(
   ripgrep
   thefuck
   lazygit
+  tokei
   neovim
 )
 

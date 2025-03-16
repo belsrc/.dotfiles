@@ -68,6 +68,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - [procs](https://github.com/dalance/procs) (better `ps`)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (better `grep`)
 - [sd](https://github.com/chmln/sd) (better `sed`)
+- [tokei](https://github.com/XAMPPRocky/tokei) (Code line counter)
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer) (Rust version of [TLDR](https://github.com/tldr-pages/tldr))
 - [thefuck](https://github.com/nvbn/thefuck) (WTF was that command?)
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
