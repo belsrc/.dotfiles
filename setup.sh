@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+if [[ $1 == "--help" ]]; then
+  echo ""
+  echo "setup.sh [--macos]"
+  echo "  --macos: Run the MacOS configuration script"
+  echo ""
+  exit 0
+fi
+
 . sh/utils.sh
 . sh/installs.sh
 . sh/files.sh
@@ -48,7 +56,9 @@ bat cache --build
 info "Cloning nvim setup..."
 git clone https://github.com/belsrc/belstart.nvim.git ~/.config/nvim
 
-mac_only
+if [[ $1 == "--macos" ]]; then
+  mac_only
+fi
 
 clean_up
 
