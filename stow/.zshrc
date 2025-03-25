@@ -248,9 +248,13 @@ export EDITOR="nvim"
 # ---- General ----
 count() { rg "$@" | wc -l }
 
+# ---- Upgrade crates easily ----
+cupgrade() { cargo install $(cargo install --list | egrep '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') }
+
 # ---- Mac only ----
 if [[ $OSTYPE == darwin* ]]; then
   alias flush="dscacheutil -flushcache"
   # Mac doesn't have lscpu, close as you can get
   alias lscpu="sysctl -a | grep machdep.cpu"
 fi
+
