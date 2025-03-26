@@ -130,6 +130,7 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+alias pn=pnpm
 
 # bun completions
 [ -s "/home/bkizer/.bun/_bun" ] && source "/home/bkizer/.bun/_bun"
