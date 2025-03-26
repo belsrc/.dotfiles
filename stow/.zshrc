@@ -125,11 +125,15 @@ alias pip='pip3'
 alias python='python3'
 
 # pnpm
-export PNPM_HOME="/home/bkizer/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+if [[ $OSTYPE != darwin* ]]; then
+  # Only mess with in *nix
+  export PNPM_HOME="/home/$USER/.local/share/pnpm"
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
+fi
+
 alias pn=pnpm
 
 # bun completions
