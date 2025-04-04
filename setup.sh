@@ -29,7 +29,6 @@ export PATH="$PATH:/usr/bin"
 
 install_rust
 install_python
-install_nvm
 install_tsls
 install_bun
 success "Baseline applications/languages installed"
@@ -48,6 +47,7 @@ install_rust_pkgs
 install_delta
 install_rustowl
 install_apps
+fnm_node
 success "Applications installed"
 
 info "Build cache for bat..."

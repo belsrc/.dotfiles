@@ -130,19 +130,6 @@ install_delta() {
   fi
 }
 
-# Install nvm and set node to latest.
-install_nvm() {
-  if in_cmd "node"; then
-    info "node is already installed. Skipping."
-  else
-    info "Installing node..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    source_term
-    nvm install node
-    nvm use node
-  fi
-}
-
 install_tsls() {
   npm i -g typescript-language-server
 }
@@ -171,5 +158,17 @@ install_rustowl() {
   else
     info "Installing rustowl..."
     curl -L "https://github.com/cordx56/rustowl/releases/download/v0.1.1/install.sh" | s
+  fi
+}
+
+fnm_node() {
+  source_term
+  fnm install --lts
+  if in_cmd "node"; then
+    info "node is already installed. Skipping."
+  else
+    info "Installing node..."
+    source_term
+    fnm install --lts
   fi
 }

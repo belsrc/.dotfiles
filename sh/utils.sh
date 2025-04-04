@@ -28,6 +28,7 @@ apps=(
 
 cargo_pkgs=(
   just
+  fnm
   tree-sitter-cli
   stylua
   bottom
