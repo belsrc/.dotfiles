@@ -3,7 +3,7 @@
 ############################
 
 # ---- GENERAL ----
-set -o vi
+set -o vi # Add vim motions to terminal
 
 # ---- ZSH ----
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -139,6 +139,38 @@ eval "$(zoxide init zsh)"
 ############################
 ############## ALIASES
 ############################
+
+# ---- NVIM ----
+alias vim="nvim"
+alias vi="nvim"
+
+# ---- Rust/Cargo ----
+alias rsn="cargo new"
+alias rsi="cargo init"
+alias rst="cargo test"
+alias rsr="cargo run"
+alias rsb="cargo build"
+alias rsc="cargo check"
+alias rsf="cargo fmt"
+alias rsa="cargo install"
+
+# ---- Golang ----
+alias gob="go build"
+alias gor="go run"
+alias goc="go clean -i"
+alias got="go test ./..."
+
+# ---- Bun ----
+alias bnr="bun run"
+alias bnt="bun test"
+alias bnint="bun init"
+alias bnc="bun create"
+alias bnx="bunx"
+alias bni="bun install"
+alias bna="bun add"
+alias bnr="bun remove"
+alias bnu="bun update"
+alias bno="bun outdated"
 
 # ---- Python ----
 alias pip='pip3'
