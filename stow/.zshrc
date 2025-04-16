@@ -168,7 +168,7 @@ alias bnc="bun create"
 alias bnx="bunx"
 alias bni="bun install"
 alias bna="bun add"
-alias bnr="bun remove"
+alias bnre="bun remove"
 alias bnu="bun update"
 alias bno="bun outdated"
 
