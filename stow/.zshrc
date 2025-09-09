@@ -216,6 +216,7 @@ export EDITOR="nvim"
 
 # ---- General ----
 count() { rg "$@" | wc -l }
+todos() { rgf "(TODO:)|(FIXME:)|(HACK:)|(REVIEW:)" }
 
 # ---- Upgrade crates easily ----
 cupgrade() { cargo install $(cargo install --list | egrep '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') }
