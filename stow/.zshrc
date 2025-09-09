@@ -218,6 +218,44 @@ export EDITOR="nvim"
 count() { rg "$@" | wc -l }
 todos() { rgf "(TODO:)|(FIXME:)|(HACK:)|(REVIEW:)" }
 
+git_prune() {
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: git_prune <branch1> [branch2 ...]"
+    return 1
+  fi
+
+  # Array of branches to keep
+  KEEP_BRANCHES=("$@")
+
+  # Build regex pattern
+  local REGEX
+  REGEX="$(IFS=\|; echo "${KEEP_BRANCHES[*]}")"
+
+  # Find branches to delete
+  local BRANCHES
+  BRANCHES=$(git branch | grep -vE "^\*|(${REGEX})" | awk '{$1=$1};1')
+
+  if [[ -z "$BRANCHES" ]]; then
+    echo "No branches to delete."
+    return 0
+  fi
+
+  echo "Branches to delete:"
+  echo "$BRANCHES"
+  echo
+
+  # Use a POSIX-compatible prompt
+  printf "Are you sure you want to delete these branches? (y/N) "
+  read CONFIRM
+
+  if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
+    echo "$BRANCHES" | xargs git branch -D
+    echo "Branches deleted."
+  else
+    echo "Aborted."
+  fi
+}
+
 # ---- Upgrade crates easily ----
 cupgrade() { cargo install $(cargo install --list | egrep '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') }
 
