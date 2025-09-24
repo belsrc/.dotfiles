@@ -160,6 +160,14 @@ alias gor="go run"
 alias goc="go clean -i"
 alias got="go test ./..."
 
+# ---- NPM ----
+alias npd="npm run dev"
+alias npb="npm run build"
+alias npt="npm run test"
+alias npl="npm run lint"
+alias npi="npm install"
+alias pipeline="npm run lint && npm run test && npm run build"
+
 # ---- Bun ----
 alias bnr="bun run"
 alias bnt="bun test"
