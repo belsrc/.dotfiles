@@ -166,7 +166,6 @@ alias npb="npm run build"
 alias npt="npm run test"
 alias npl="npm run lint"
 alias npi="npm install"
-alias pipeline="npm run lint && npm run test && npm run build"
 
 # ---- Bun ----
 alias bnr="bun run"
@@ -225,6 +224,10 @@ export EDITOR="nvim"
 # ---- General ----
 count() { rg "$@" | wc -l }
 todos() { rgf "(TODO:)|(FIXME:)|(HACK:)|(REVIEW:)" }
+
+pipeline() {
+  npm run lint "$@" && npm run test "$@" && npm run build "$@"
+}
 
 git_prune() {
   if [[ $# -eq 0 ]]; then
