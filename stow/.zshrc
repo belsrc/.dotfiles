@@ -147,41 +147,6 @@ eval "$(zoxide init zsh)"
 alias vim="nvim"
 alias vi="nvim"
 
-# ---- Rust/Cargo ----
-alias rsn="cargo new"
-alias rsi="cargo init"
-alias rst="cargo test"
-alias rsr="cargo run"
-alias rsb="cargo build"
-alias rsc="cargo check"
-alias rsf="cargo fmt"
-alias rsa="cargo install"
-
-# ---- Golang ----
-alias gob="go build"
-alias gor="go run"
-alias goc="go clean -i"
-alias got="go test ./..."
-
-# ---- NPM ----
-alias npd="npm run dev"
-alias npb="npm run build"
-alias npt="npm run test"
-alias npl="npm run lint"
-alias npi="npm install"
-
-# ---- Bun ----
-alias bnr="bun run"
-alias bnt="bun test"
-alias bnint="bun init"
-alias bnc="bun create"
-alias bnx="bunx"
-alias bni="bun install"
-alias bna="bun add"
-alias bnre="bun remove"
-alias bnu="bun update"
-alias bno="bun outdated"
-
 # ---- Python ----
 alias pip='pip3'
 alias python='python3'
@@ -217,6 +182,48 @@ alias lg="lazygit"
 
 # ---- Tokei (Count lines of code) ----
 alias loc="tokei"
+
+# ---- Rust/Cargo ----
+alias rsn="cargo new"
+alias rsi="cargo init"
+alias rst="cargo test"
+alias rsr="cargo run"
+alias rsb="cargo build"
+alias rsc="cargo check"
+alias rsf="cargo fmt"
+alias rsa="cargo install"
+
+# ---- Golang ----
+alias gob="go build"
+alias gor="go run"
+alias goc="go clean -i"
+alias got="go test ./..."
+
+# ---- NPM ----
+alias npd="npm run dev"
+alias npb="npm run build"
+alias npt="npm run test"
+alias npl="npm run lint"
+alias npi="npm install"
+
+# ---- PNPM ----
+alias pnd="npm run dev"
+alias pnb="npm run build"
+alias pnt="npm run test"
+alias pnl="npm run lint"
+alias pni="npm install"
+
+# ---- Bun ----
+alias bnr="bun run"
+alias bnt="bun test"
+alias bnint="bun init"
+alias bnc="bun create"
+alias bnx="bunx"
+alias bni="bun install"
+alias bna="bun add"
+alias bnre="bun remove"
+alias bnu="bun update"
+alias bno="bun outdated"
 
 # ---- thefuck alias ----
 eval $(thefuck --alias)
