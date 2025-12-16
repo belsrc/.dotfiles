@@ -47,6 +47,7 @@ install_rust_pkgs
 install_delta
 install_rustowl
 install_apps
+install_jiratui
 fnm_node
 success "Applications installed"
 

@@ -73,6 +73,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - [thefuck](https://github.com/nvbn/thefuck) (WTF was that command?)
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (better `cd`)
+- [jiratui](https://github.com/whyisdifficult/jiratui) (Jira TUI, will need to set [config](https://github.com/whyisdifficult/jiratui?tab=readme-ov-file#settings))
 
 ## GUI Applications Installed
 

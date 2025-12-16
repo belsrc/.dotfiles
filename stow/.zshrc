@@ -139,6 +139,9 @@ export BAT_THEME="One Dark"
 # ---- Zoxide ----
 eval "$(zoxide init zsh)"
 
+# ---- Jiratui ----
+export JIRA_TUI_CONFIG_FILE="jira-config.yaml"
+
 ############################
 ############## ALIASES
 ############################
@@ -182,6 +185,9 @@ alias lg="lazygit"
 
 # ---- Tokei (Count lines of code) ----
 alias loc="tokei"
+
+# ---- Jiratui ----
+alias jira="jiratui ui"
 
 # ---- Rust/Cargo ----
 alias rsn="cargo new"

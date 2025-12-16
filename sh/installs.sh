@@ -161,6 +161,17 @@ install_rustowl() {
   fi
 }
 
+# Install jiratui. There's different install locations and names.
+install_jiratui() {
+  if in_any "jiratui" || in_any "jiratui-git"; then
+    info "jiratui is already installed. Skipping."
+  else
+    info "Installing jiratui..."
+    pip3 install jiratui || echo "jiratui failed to install"
+    success "jiratui install complete."
+  fi
+}
+
 fnm_node() {
   source_term
   fnm install --lts
