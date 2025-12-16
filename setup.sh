@@ -48,6 +48,7 @@ install_delta
 install_rustowl
 install_apps
 install_jiratui
+install_ghcli
 fnm_node
 success "Applications installed"
 
@@ -56,6 +57,9 @@ bat cache --build
 
 info "Cloning nvim setup..."
 git clone https://github.com/belsrc/belstart.nvim.git ~/.config/nvim
+
+info "Adding GH Dash extension"
+gh extension install dlvhdr/gh-dash
 
 if [[ $1 == "--macos" ]]; then
   mac_only

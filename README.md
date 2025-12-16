@@ -74,6 +74,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (better `cd`)
 - [jiratui](https://github.com/whyisdifficult/jiratui) (Jira TUI, will need to set [config](https://github.com/whyisdifficult/jiratui?tab=readme-ov-file#settings))
+- [github cli](https://github.com/cli/cli) + [dash](https://github.com/dlvhdr/gh-dash)
 
 ## GUI Applications Installed
 

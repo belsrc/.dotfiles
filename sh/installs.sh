@@ -172,6 +172,26 @@ install_jiratui() {
   fi
 }
 
+# Install Github CLI. The package names are different.
+install_ghcli() {
+  if in_any "gh" || in_any "github-cli"; then
+    info "github cli is already installed. Skipping."
+  else
+    info "Installing github cli..."
+
+    OS="`uname`"
+    case $OS in
+      'Linux')
+        sudo pacman -S github-cli || echo "github cli failed to install"
+        ;;
+      'Darwin')
+        brew install gh || echo "github cli failed to install"
+        ;;
+      *) ;;
+    esac
+  fi
+}
+
 fnm_node() {
   source_term
   fnm install --lts

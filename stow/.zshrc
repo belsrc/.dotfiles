@@ -189,6 +189,9 @@ alias loc="tokei"
 # ---- Jiratui ----
 alias jira="jiratui ui"
 
+# ---- Github CLI + Dash ----
+alias ghc="gh dash"
+
 # ---- Rust/Cargo ----
 alias rsn="cargo new"
 alias rsi="cargo init"
