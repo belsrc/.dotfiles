@@ -214,6 +214,7 @@ alias npb="npm run build"
 alias npt="npm run test"
 alias npl="npm run lint"
 alias npi="npm install"
+alias npr="npm run"
 
 # ---- PNPM ----
 alias pnd="pnpm run dev"
@@ -221,6 +222,7 @@ alias pnb="pnpm run build"
 alias pnt="pnpm run test"
 alias pnl="pnpm run lint"
 alias pni="pnpm install"
+alias pnr="pnpm run"
 
 # ---- Bun ----
 alias bnr="bun run"
