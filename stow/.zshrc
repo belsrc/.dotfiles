@@ -31,11 +31,11 @@ source $ZSH/oh-my-zsh.sh
 
 # ---- Homebrew ----
 if [[ $OSTYPE == darwin* ]]; then
-  export PATH="$PATH:/opt/homebrew/bin"
+  export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # ---- Go ----
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$HOME/go/bin:$PATH"
 
 # ---- Rust Cargo ----
 . "$HOME/.cargo/env"
@@ -54,7 +54,7 @@ export BUN_INSTALL="$HOME/.bun"
 
 [ -s "$BUN_INSTALL/.bun/_bun" ] && source "$BUN_INSTALL/_bun"
 
-export PATH="$PATH:$BUN_INSTALL/bin"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # ---- PNPM ----
 if [[ $OSTYPE != darwin* ]]; then
