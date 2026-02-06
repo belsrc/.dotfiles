@@ -33,6 +33,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ $OSTYPE == darwin* ]]; then
   export PATH="/opt/homebrew/bin:$PATH"
 fi
+export PATH="$HOME/.local/bin:$PATH"
 
 # ---- Go ----
 export PATH="$HOME/go/bin:$PATH"
@@ -42,7 +43,7 @@ export PATH="$HOME/go/bin:$PATH"
 
 # ---- Node ----
 eval "$(fnm env --use-on-cd --shell zsh)" &>/dev/null
-fnm use 18 &>/dev/null
+fnm use 22.21.1 &>/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -131,6 +132,11 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# Check if the work configuration file exists and source it if it does
+if [[ -f ~/.zshrc.work ]]; then
+    source ~/.zshrc.work
+fi
 
 # ---- BAT ----
 # One Dark bat theme
