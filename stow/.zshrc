@@ -294,6 +294,19 @@ git_prune() {
   fi
 }
 
+# doFor "bun run test" 20
+doFor() {
+  # Extract the last argument using a subshell arithmetic expansion
+  local n="${@: -1}"
+  # Extract everything except the last argument
+  local cmd="${@:1:$(( $# - 1 ))}"
+
+  # C-style loop: performant and avoids brace expansion issues
+  for (( i=0; i<n; i++ )); do
+    (eval "$cmd") || break
+  done
+}
+
 # ---- Upgrade crates easily ----
 cupgrade() { cargo install $(cargo install --list | egrep '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') }
 
