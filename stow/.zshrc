@@ -142,9 +142,6 @@ fi
 # One Dark bat theme
 export BAT_THEME="One Dark"
 
-# ---- Zoxide ----
-eval "$(zoxide init zsh)"
-
 # ---- Jiratui ----
 export JIRA_TUI_CONFIG_FILE="jira-config.yaml"
 
@@ -317,3 +314,5 @@ if [[ $OSTYPE == darwin* ]]; then
   alias lscpu="sysctl -a | grep machdep.cpu"
 fi
 
+# ---- Zoxide ----
+eval "$(zoxide init zsh)"
