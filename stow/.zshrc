@@ -316,3 +316,4 @@ fi
 
 # ---- Zoxide ----
 eval "$(zoxide init zsh)"
+export _ZO_DOCTOR=0
