@@ -246,14 +246,21 @@ eval $(thefuck --alias)
 export EDITOR="nvim"
 
 # ---- General ----
+
+# Generic count function
 count() { rg "$@" | wc -l }
+
+# Count the number of TODO, FIXME, HACK, and REVIEW tagged comments
 todos() { rgf "(TODO:)|(FIXME:)|(HACK:)|(REVIEW:)" }
 
+# Run the normal NPM pipeline commands
 pipeline() {
   npm run lint "$@" && npm run test "$@" && npm run build "$@"
 }
 
-git_prune() {
+# Delete all but the specified git branches
+# gitPrune main test-branch
+gitPrune() {
   if [[ $# -eq 0 ]]; then
     echo "Usage: git_prune <branch1> [branch2 ...]"
     return 1
@@ -291,6 +298,7 @@ git_prune() {
   fi
 }
 
+# Run the specified command for the given iterations
 # doFor "bun run test" 20
 doFor() {
   # Extract the last argument using a subshell arithmetic expansion
