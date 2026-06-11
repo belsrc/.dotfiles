@@ -145,6 +145,11 @@ export BAT_THEME="One Dark"
 # ---- Jiratui ----
 export JIRA_TUI_CONFIG_FILE="jira-config.yaml"
 
+# ---- Todo/Tuxedo ----
+export TODO_DIR="$HOME/Documents"
+export TODO_FILE="$TODO_DIR/todo.txt"
+export DONE_FILE="$TODO_DIR/done.txt"
+
 ############################
 ############## ALIASES
 ############################
