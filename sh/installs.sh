@@ -192,6 +192,37 @@ install_ghcli() {
   fi
 }
 
+# Install Todo.txt. The package names are different.
+install_todotxt() {
+  if in_any "todotxt"; || in_any "todo.sh" then
+    info "todo-txt is already installed. Skipping."
+  else
+    info "Installing todotxt..."
+
+    OS="`uname`"
+    case $OS in
+      'Linux')
+        sudo pacman -S --noconfirm todotxt || echo "todo-txt failed to install"
+        ;;
+      'Darwin')
+        brew install todo-txt || echo "todo-txt failed to install"
+        ;;
+      *) ;;
+    esac
+  fi
+}
+
+# Install tuxedo. Non-standard cargo install.
+install_tuxedo() {
+  if in_any "tuxedo"; then
+    info "tuxedo is already installed. Skipping."
+  else
+    info "Installing tuxedo..."
+    cargo install --git https://github.com/webstonehq/tuxedo
+    success "tuxedo install complete."
+  fi
+}
+
 fnm_node() {
   source_term
   fnm install --lts

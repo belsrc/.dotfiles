@@ -49,6 +49,8 @@ install_rustowl
 install_apps
 install_jiratui
 install_ghcli
+install_todotxt
+install_tuxedo
 fnm_node
 success "Applications installed"
 
