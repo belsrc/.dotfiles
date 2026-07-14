@@ -44,6 +44,7 @@ install_pnpm
 install_omz
 install_fd
 install_rust_pkgs
+install_yazi
 install_delta
 install_rustowl
 install_apps

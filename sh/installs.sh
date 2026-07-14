@@ -119,6 +119,17 @@ install_fd() {
   fi
 }
 
+# Install Yazi. Due to something about Cargo the yazi
+# package has a package that installs that package.
+install_yazi() {
+  if in_cargo "yazi-build" || in_cargo "yazi-cli" || in_cargo "yazi-fm"; then
+    info "yazi is already installed. Skipping."
+  else
+    info "Installing yazi..."
+    cargo install --force yazi-build
+  fi
+}
+
 # Install Delta. The command and the package name are different
 # so just yank it out of the app list for ease.
 install_delta() {
