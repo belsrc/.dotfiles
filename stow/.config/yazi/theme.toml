@@ -1,2 +1,9 @@
 [flavor]
 use = "onedark"
+
+[git]
+modified_sign  = " "
+added_sign     = " "
+deleted_sign   = " "
+updated_sign   = " "
+untracked_sign = " "
