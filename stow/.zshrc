@@ -263,6 +263,69 @@ pipeline() {
   npm run lint "$@" && npm run test "$@" && npm run build "$@"
 }
 
+update_packages() {
+  # Helper function to print headers uniformly
+  print_header() {
+    if [ -n "$ZSH_VERSION" ]; then
+      print -l "" "${BOLD_YELLOW}==> $1${RESET}"
+    else
+      echo -e "\n${BOLD_YELLOW}==> $1${RESET}"
+    fi
+  }
+
+  local BOLD_YELLOW
+  local RESET
+  if [ -n "$ZSH_VERSION" ]; then
+    BOLD_YELLOW=$'\e[1;33m'
+    RESET=$'\e[0m'
+  else
+    BOLD_YELLOW='\033[1;33m'
+    RESET='\033[0m'
+  fi
+
+  local os
+  os="$(uname)"
+
+  if [ "$os" = "Darwin" ]; then
+    print_header "Updating macOS Homebrew packages..."
+    brew update && brew upgrade && brew cleanup
+  elif [ "$os" = "Linux" ]; then
+    # Check if it is Arch Linux specifically
+    if [ -f /etc/arch-release ]; then
+      print_header "Updating Arch Linux system packages..."
+      sudo pacman -Syu
+    else
+      echo "Linux detected, but it is not Arch Linux. Skipping system package update."
+    fi
+  else
+    echo "Unknown OS: $os. Skipping system package update."
+  fi
+
+  print_header "Updating Rust compiler and Cargo packages..."
+  if command -v rustup &> /dev/null; then
+    rustup update
+  fi
+  # Improved cargo extraction to avoid regex failures
+  cargo install $(cargo install --list | awk '/^[a-z0-9_-]+ v[0-9.]+:$/ {print $1}')
+
+  print_header "Updating Python pip3 packages..."
+  if command -v pip3 &> /dev/null; then
+    # Modern pip fix: parsing json safely to extract package names
+    python3 -m pip list --outdated --format=json 2>/dev/null | \
+    python3 -c "import sys, json; print(' '.join([pkg['name'] for pkg in json.load(sys.stdin)]))" | \
+    xargs -r pip3 install -U
+  else
+    echo "pip3 is not installed. Skipping Python packages."
+  fi
+
+  print_header "Updating global Node.js packages..."
+  if command -v npm &> /dev/null; then
+    npm update -g
+  else
+    echo "npm is not installed. Skipping Node.js packages."
+  fi
+}
+
 # Delete all but the specified git branches
 # gitPrune main test-branch
 gitPrune() {
@@ -316,9 +379,6 @@ doFor() {
     (eval "$cmd") || break
   done
 }
-
-# ---- Upgrade crates easily ----
-cupgrade() { cargo install $(cargo install --list | egrep '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') }
 
 # ---- Mac only ----
 if [[ $OSTYPE == darwin* ]]; then
