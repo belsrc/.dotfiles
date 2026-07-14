@@ -21,6 +21,7 @@ mk_folders=(
   ~/.config/bat/themes
   ~/.config/ghostty
   ~/.config/kitty
+  ~/.config/tuxedo
   ~/.config/yazi
   ~/.config/yazi/flavors
   ~/.config/yazi/flavors/onedark.yazi
