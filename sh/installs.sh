@@ -245,3 +245,7 @@ fnm_node() {
     fnm install --lts
   fi
 }
+
+install_tmp() {
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}

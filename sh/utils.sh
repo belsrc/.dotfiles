@@ -24,6 +24,7 @@ apps=(
   lazygit
   tokei
   neovim
+  tmux
 )
 
 cargo_pkgs=(

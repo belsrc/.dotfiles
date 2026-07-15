@@ -52,6 +52,7 @@ install_jiratui
 install_ghcli
 install_todotxt
 install_tuxedo
+install_tmp
 fnm_node
 success "Applications installed"
 

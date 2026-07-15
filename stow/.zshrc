@@ -158,6 +158,10 @@ export DONE_FILE="$TODO_DIR/done.txt"
 alias vim="nvim"
 alias vi="nvim"
 
+# ---- TMUX ----
+tmn() { tmux new -s "$1"; }
+tma() { tmux attach -t "$1"; }
+
 # ---- Python ----
 alias pip='pip3'
 alias python='python3'
