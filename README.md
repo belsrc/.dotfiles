@@ -55,6 +55,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - zsh
 - xclip
 - unzip
+- [tmux](https://github.com/tmux/tmux)
 - [stow](https://www.gnu.org/software/stow/) (dotfile management)
 - [bat](https://github.com/sharkdp/bat) (better `cat`)
 - [bottom](https://github.com/ClementTsang/bottom) (better `top`)
