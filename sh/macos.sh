@@ -3,7 +3,7 @@
 . sh/utils.sh
 
 casks=(
-  kitty
+  ghostty
   visual-studio-code
   arc
   slack

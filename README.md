@@ -80,7 +80,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 
 ## GUI Applications Installed
 
-- [kitty terminal](https://sw.kovidgoyal.net/kitty/)
+- [ghostty](https://ghostty.org/)
 - visual-studio-code
 - arc
 - slack

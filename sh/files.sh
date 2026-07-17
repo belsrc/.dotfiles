@@ -20,6 +20,7 @@ mk_folders=(
   ~/.config/bat
   ~/.config/bat/themes
   ~/.config/ghostty
+  ~/.config/ghostty/themes
   ~/.config/kitty
   ~/.config/tuxedo
   ~/.config/yazi

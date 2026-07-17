@@ -1,7 +1,8 @@
 font-family = "JetBrainsMono Nerd Font"
 font-size = 16
-theme = OneHalfDark
-background-opacity = 0.99
+# https://ghostty-style.vercel.app
+theme = atom-one-dark
+background-opacity = 0.98
 
 window-height = 62
 window-width = 233
