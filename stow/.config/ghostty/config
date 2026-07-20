@@ -1,7 +1,7 @@
 font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 font-thicken = true
-font-thicken-strength = 75
+font-thicken-strength = 100
 # https://ghostty-style.vercel.app
 theme = atom-one-dark
 background-opacity = 0.98
