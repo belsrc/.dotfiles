@@ -11,6 +11,7 @@ fi
 . sh/utils.sh
 . sh/installs.sh
 . sh/files.sh
+. sh/skills.sh
 . sh/macos.sh
 
 # Might as well get it now.
@@ -64,6 +65,9 @@ git clone https://github.com/belsrc/belstart.nvim.git ~/.config/nvim
 
 info "Adding GH Dash extension"
 gh extension install dlvhdr/gh-dash
+
+install_skills
+success "Skills installed"
 
 if [[ $1 == "--macos" ]]; then
   mac_only
