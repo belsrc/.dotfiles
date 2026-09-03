@@ -30,6 +30,7 @@ mk_folders=(
   ~/.pi/agent
   ~/.pi/agent/extensions
   ~/.pi/agent/extensions/pi-permission-system
+  ~/.pi-lens
 )
 
 # Rename the old config files before we symlink the new ones.
