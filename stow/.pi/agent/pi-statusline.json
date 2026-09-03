@@ -1,0 +1,97 @@
+{
+    "palettePreset": "custom",
+    "palette": {
+      "model": { "fg": "#181A1F", "bg": "#ABB2BF" },
+      "thinking": { "fg": "#181A1F", "bg": "#98C379" },
+      "cwd": { "fg": "#181A1F", "bg": "#61AFEF" },
+      "branch": { "fg": "#181A1F", "bg": "#E5C07B" },
+      "context": { "fg": "#181A1F", "bg": "#C678DD" },
+      "tools": { "fg": "#181A1F", "bg": "#56B6C2" }
+    },
+    "density": "compact",
+    "separator": "powerline",
+    "segments": [
+        "model",
+        "thinking",
+        "cwd",
+        "branch",
+        "tools",
+        "context"
+    ],
+    "segmentText": {
+        "brand": {
+            "prefix": "",
+            "suffix": ""
+        },
+        "provider": {
+            "prefix": "󰜘 ",
+            "suffix": ""
+        },
+        "model": {
+            "prefix": "󱚟 ",
+            "suffix": "",
+            "truncationLength": 36,
+            "truncationSymbol": "…",
+            "truncationDirection": "start"
+        },
+        "thinking": {
+            "prefix": " ",
+            "suffix": ""
+        },
+        "cwd": {
+            "prefix": " ",
+            "suffix": ""
+        },
+        "branch": {
+            "prefix": " ",
+            "suffix": ""
+        },
+        "tools": {
+            "prefix": "󱁤 ",
+            "suffix": ""
+        },
+        "context": {
+            "prefix": "󰖯 ctx ",
+            "suffix": ""
+        },
+        "tokens": {
+            "prefix": "󰆙 ",
+            "suffix": ""
+        },
+        "cache": {
+            "prefix": " ",
+            "suffix": ""
+        },
+        "cost": {
+            "prefix": " $",
+            "suffix": ""
+        },
+        "time": {
+            "prefix": " ",
+            "suffix": ""
+        },
+        "turn": {
+            "prefix": "󰑖 #",
+            "suffix": ""
+        }
+    },
+    "extensionStatusIcons": {
+        "accounts": "󰀄",
+        "caffeinate": "󰐂",
+        "chrome-devtools": "",
+        "firecrawl": "󰈸",
+        "get_subagent_results": "",
+        "Agent": "",
+        "steer_subagent": "",
+        "github-pr": "",
+        "goal": "󰓾",
+        "google-genai": "",
+        "lsp": "",
+        "plan-mode": "󱞁",
+        "retry": "󰑖",
+        "subagents": "󱚞",
+        "sync": "󰓦",
+        "thinking": "",
+        "usage": ""
+    }
+}

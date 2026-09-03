@@ -1,0 +1,6 @@
+{
+    "showIndicator": false,
+    "models": {
+        "litellm/gpt-5.4": "low"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "enableInstallTelemetry": false,
+  "theme": "dark",
+  "packages": [
+    "npm:pi-provider-litellm",
+    "npm:@tintinweb/pi-tasks",
+    "npm:@tintinweb/pi-subagents",
+    "npm:@m4ss/pi-web-fetch",
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@m4ss/pi-llms-txt",
+    "npm:pi-lens",
+    "npm:pi-claude-style-tools",
+    "npm:@narumitw/pi-statusline",
+    "npm:@firstpick/pi-extension-tools",
+    "npm:pi-verbosity-control"
+  ],
+  "defaultProvider": "litellm",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "0.84.4"
+}

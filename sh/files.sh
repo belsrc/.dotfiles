@@ -26,6 +26,10 @@ mk_folders=(
   ~/.config/yazi
   ~/.config/yazi/flavors
   ~/.config/yazi/flavors/onedark.yazi
+  ~/.pi
+  ~/.pi/agent
+  ~/.pi/agent/extensions
+  ~/.pi/agent/extensions/pi-permission-system
 )
 
 # Rename the old config files before we symlink the new ones.

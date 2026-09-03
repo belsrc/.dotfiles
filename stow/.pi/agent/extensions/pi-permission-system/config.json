@@ -1,0 +1,44 @@
+{
+  "permission": {
+    "*": "allow",
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "~/.ssh/*": "deny"
+    },
+    "read": "allow",
+    "write": {
+      "*": "allow",
+      "*.ts": "ask",
+      "*.tsx": "ask",
+      "*.js": "ask",
+      "*.jsx": "ask",
+      "*.md": "ask",
+      "*.lock": "deny",
+      "package-lock.json": "deny",
+      "pnpm-lock.yaml": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "*.lock": "deny",
+      "package-lock.json": "deny",
+      "pnpm-lock.yaml": "deny"
+    },
+    "bash": {
+      "*": "allow",
+      "rm -rf *": "deny",
+      "chmod *": "ask",
+      "sudo *": "ask",
+      "mkfs *": "ask",
+      "dd *": "ask",
+      "git commit *": "ask",
+      "git push *": "ask",
+      "git checkout *": "ask"
+    },
+    "mcp": { "mcp_status": "allow" },
+    "skill": { "*": "allow" },
+    "external_directory": "allow"
+  }
+}
