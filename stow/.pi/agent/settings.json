@@ -12,10 +12,11 @@
     "npm:pi-claude-style-tools",
     "npm:@narumitw/pi-statusline",
     "npm:@firstpick/pi-extension-tools",
-    "npm:pi-verbosity-control"
+    "npm:pi-verbosity-control",
+    "https://github.com/cathrynlavery/diagram-design"
   ],
   "defaultProvider": "litellm",
   "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "high",
-  "lastChangelogVersion": "0.84.4"
+  "lastChangelogVersion": "0.85.0"
 }

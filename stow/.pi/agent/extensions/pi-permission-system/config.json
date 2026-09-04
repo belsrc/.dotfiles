@@ -11,11 +11,6 @@
     "read": "allow",
     "write": {
       "*": "allow",
-      "*.ts": "ask",
-      "*.tsx": "ask",
-      "*.js": "ask",
-      "*.jsx": "ask",
-      "*.md": "ask",
       "*.lock": "deny",
       "package-lock.json": "deny",
       "pnpm-lock.yaml": "deny"
