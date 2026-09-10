@@ -14,6 +14,9 @@ fi
 . sh/skills.sh
 . sh/macos.sh
 
+DETECTED_PLATFORM=$(detect_platform) || exit 1
+export DETECTED_PLATFORM
+
 # Might as well get it now.
 sudo -v
 

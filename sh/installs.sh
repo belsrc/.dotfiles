@@ -66,21 +66,11 @@ install_rust() {
 
 # Install Python. The package names are different.
 install_python() {
-  if in_any "pip"; then
+  if { in_any "python" || in_any "python3"; } && { in_any "pip" || in_any "pip3"; }; then
     info "python is already installed. Skipping."
   else
     info "Installing python..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        sudo pacman -S --noconfirm python python-pip || echo "python failed to install"
-        ;;
-      'Darwin')
-        brew install python || echo "python failed to install"
-        ;;
-      *) ;;
-    esac
+    install_pkg python
   fi
 }
 
@@ -185,41 +175,21 @@ install_jiratui() {
 
 # Install Github CLI. The package names are different.
 install_ghcli() {
-  if in_any "gh" || in_any "github-cli"; then
+  if in_any "gh"; then
     info "github cli is already installed. Skipping."
   else
     info "Installing github cli..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        sudo pacman -S github-cli || echo "github cli failed to install"
-        ;;
-      'Darwin')
-        brew install gh || echo "github cli failed to install"
-        ;;
-      *) ;;
-    esac
+    install_pkg ghcli
   fi
 }
 
 # Install Todo.txt. The package names are different.
 install_todotxt() {
-  if in_any "todotxt"; || in_any "todo.sh" then
+  if in_any "todotxt" || in_any "todo.sh"; then
     info "todo-txt is already installed. Skipping."
   else
     info "Installing todotxt..."
-
-    OS="`uname`"
-    case $OS in
-      'Linux')
-        sudo pacman -S --noconfirm todotxt || echo "todo-txt failed to install"
-        ;;
-      'Darwin')
-        brew install todo-txt || echo "todo-txt failed to install"
-        ;;
-      *) ;;
-    esac
+    install_pkg todotxt
   fi
 }
 
