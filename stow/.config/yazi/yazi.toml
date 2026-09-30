@@ -1,9 +1,19 @@
 [mgr]
 show_hidden = true
 
+[preview]
+# Force kitty protocol passthrough inside tmux
+image_filter = "triangle"
+image_quality = 75
+
 [opener]
 view_fullscreen = [
-  { run = 'clear && viu "$@" && read -r -n 1', block = true, desc = "Fullscreen Preview" }
+  { run = '''
+timg -pk --clear --center "$@" </dev/tty >/dev/tty
+tmux refresh-client >/dev/null 2>&1 || true
+printf '\n'
+dd bs=1 count=1 </dev/tty >/dev/null 2>&1
+''', block = true, desc = "Fullscreen Preview" }
 ]
 
 [open]

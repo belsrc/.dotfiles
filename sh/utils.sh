@@ -25,6 +25,7 @@ apps=(
   tokei
   neovim
   tmux
+  timg
 )
 
 cargo_pkgs=(
@@ -40,7 +41,6 @@ cargo_pkgs=(
   git-delta
   zoxide
   hyperfine
-  viu
 )
 
 reset_color=$(tput sgr 0)
