@@ -77,6 +77,7 @@ git clone https://github.com/belsrc/.dotfiles.git ~/.dotfiles
 - [jiratui](https://github.com/whyisdifficult/jiratui) (Jira TUI, will need to set [config](https://github.com/whyisdifficult/jiratui?tab=readme-ov-file#settings))
 - [github cli](https://github.com/cli/cli) + [dash](https://github.com/dlvhdr/gh-dash)
 - [tuxedo](https://github.com/webstonehq/tuxedo) (TODO tracking)
+- [viu](https://github.com/atanunq/viu) (image viewer)
 
 ## GUI Applications Installed
 
