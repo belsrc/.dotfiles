@@ -1,6 +1,16 @@
 [mgr]
 show_hidden = true
 
+[opener]
+view_fullscreen = [
+  { run = 'clear && viu "$@" && read -r -n 1', block = true, desc = "Fullscreen Preview" }
+]
+
+[open]
+prepend_rules =[
+  { mime = "image/*", use = "view_fullscreen" }
+]
+
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"

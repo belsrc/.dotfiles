@@ -40,6 +40,7 @@ cargo_pkgs=(
   git-delta
   zoxide
   hyperfine
+  viu
 )
 
 reset_color=$(tput sgr 0)
